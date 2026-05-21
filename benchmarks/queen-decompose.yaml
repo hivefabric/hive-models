@@ -1,0 +1,41 @@
+id: queen-decompose
+name: Queen Decomposition
+description: |
+  End-to-end test of the queen orchestrator: takes a compound prompt,
+  expects the right sub-tool calls in the right order, and grades the
+  final answer. Targets are queen handlers (capability URN
+  `oasf://demo/queen/decompose/v1`).
+
+applies_to:
+  - kind: queen
+    urn: oasf://demo/queen/decompose/v1
+
+cases:
+  - id: simple-add
+    prompt: "What is 17 + 25?"
+    expected: "42"
+    grader: exact_int
+    expected_tool_calls:
+      - sum_agent
+
+  - id: simple-mul
+    prompt: "Multiply 8 by 9."
+    expected: "72"
+    grader: exact_int
+    expected_tool_calls:
+      - multiply_agent
+
+  - id: compound-add-mul
+    prompt: "Compute (3 + 4) * 2."
+    expected: "14"
+    grader: exact_int
+    expected_tool_calls:
+      - sum_agent
+      - multiply_agent
+
+  - id: greeting-no-tools
+    # Open-ended chat — the queen should answer directly without dispatching.
+    prompt: "Hello!"
+    expected_contains: ["hello", "hi", "hey", "greetings"]
+    grader: contains_any_ci
+    expected_tool_calls: []

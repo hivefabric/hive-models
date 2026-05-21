@@ -1,0 +1,15 @@
+id: llama3.2:3b
+name: Llama 3.2 3B Instruct
+capability_urn: oasf://commons/inference/llama3.2-3b/v1
+runtime: ollama
+pull_tag: llama3.2:3b
+size_mb: 2000
+min_memory_mb: 6144
+min_cpu_cores: 2
+supports_tool_calling: true
+license: llama-3.2-community
+tier: slm
+description: |
+  Meta's Llama 3.2 3B. Native tool-calling support (JSON-schema based);
+  reliable enough to drive the queen orchestrator on local hardware
+  without a frontier API. The default queen comb in the demo runs this.

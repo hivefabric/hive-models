@@ -1,0 +1,15 @@
+id: qwen2.5:0.5b
+name: Qwen 2.5 0.5B Instruct
+capability_urn: oasf://commons/inference/qwen2.5-0.5b/v1
+runtime: ollama
+pull_tag: qwen2.5:0.5b
+size_mb: 397
+min_memory_mb: 2048
+min_cpu_cores: 2
+supports_tool_calling: false
+license: apache-2.0
+tier: slm
+description: |
+  Small/fast Qwen variant. Suitable for classification, light extraction,
+  short generation. Good worker comb default for the demo. Not reliable
+  at multi-turn tool calling — prefer larger models for queen roles.

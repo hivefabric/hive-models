@@ -1,0 +1,40 @@
+id: freeform-qa
+name: Freeform Q&A
+description: |
+  Short-answer factual recall and reasoning. Probes whether the model
+  produces a useful answer at all, and whether it hallucinates when it
+  doesn't know. Graded by substring match on the expected key facts.
+
+applies_to:
+  - kind: model
+    tier: slm
+  - kind: model
+    tier: llm
+
+cases:
+  - id: capital-france
+    prompt: "What is the capital of France? Answer in one word."
+    expected_contains: ["paris"]
+    grader: contains_any_ci
+
+  - id: capital-japan
+    prompt: "What is the capital of Japan? Answer in one word."
+    expected_contains: ["tokyo"]
+    grader: contains_any_ci
+
+  - id: speed-of-light
+    prompt: "What is the speed of light in vacuum, in km/s? Just the number, rounded."
+    expected_contains: ["299792", "300000"]
+    grader: contains_any_ci
+
+  - id: greeting
+    prompt: "Say hello in one short sentence."
+    expected_contains: ["hello", "hi", "hey", "greetings"]
+    grader: contains_any_ci
+
+  - id: refusal-unknown
+    # Tests anti-hallucination: the model should not confidently fabricate.
+    prompt: "What is the airspeed velocity of an unladen Klorthian skybeast?"
+    forbidden_contains: ["m/s", "km/h", "mph"]   # any concrete number is a hallucination
+    expected_contains: ["don't know", "do not know", "unknown", "made up", "fictional", "not aware"]
+    grader: contains_any_ci_with_forbidden

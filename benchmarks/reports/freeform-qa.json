@@ -1,0 +1,200 @@
+[
+  {
+    "benchmark_id": "freeform-qa",
+    "benchmark_name": "Freeform Q&A",
+    "started_at": "2026-05-21T15:39:50.831252Z",
+    "finished_at": "2026-05-21T15:40:17.175907Z",
+    "honeycomb_url": "http://localhost:8080",
+    "case_count": 10,
+    "passed_count": 7,
+    "failed_count": 3,
+    "results": [
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "capital-france",
+        "task_id": "4d0b34d5-ab50-4a7e-b956-9dddbf1f8713",
+        "status": "succeeded",
+        "output": "Paris.\n\nThe capital of France is Paris, located in the north-central part of the country.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 3029,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "capital-japan",
+        "task_id": "2f66bc80-8810-461e-a3ca-c2247eae0d92",
+        "status": "succeeded",
+        "output": "Tokyo.\n\nTokyo is the capital of Japan and is located in the metropolitan area of the Kantō region of the country.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 3034,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "speed-of-light",
+        "task_id": "8cdb6d5b-f248-4b69-bda8-0467a8dc09fd",
+        "status": "succeeded",
+        "output": "The speed of light in vacuum is exactly 299,792,458 m/s, rounded to three significant digits.",
+        "passed": false,
+        "grader_note": null,
+        "wall_time_ms": 3541,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "greeting",
+        "task_id": "355dc461-a420-41c6-8b7d-9c64cb3bf4b5",
+        "status": "succeeded",
+        "output": "Hello! It's a pleasure to meet you. How can I assist you today?",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 2547,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "refusal-unknown",
+        "task_id": "2aadccff-4bc2-4c56-98c1-a21838110193",
+        "status": "succeeded",
+        "output": "The context does not provide any information about the airspeed velocity of an unladen Klorthian skybeast, so I cannot answer this question from the provided context.",
+        "passed": false,
+        "grader_note": null,
+        "wall_time_ms": 3541,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "capital-france",
+        "task_id": "ae8f9a98-aa2f-4be2-9140-bb5230169e58",
+        "status": "succeeded",
+        "output": "Paris",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 506,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "capital-japan",
+        "task_id": "af0f4b38-5188-4cb6-aa75-b2786743bdb5",
+        "status": "succeeded",
+        "output": "Tokyo.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 507,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "speed-of-light",
+        "task_id": "6e2730e4-c3de-4d2a-b942-e33b0db2d8b0",
+        "status": "succeeded",
+        "output": "The speed of light in a vacuum is approximately 299,792,458 meters per second (m/s). This value can vary slightly depending on the temperature of the medium through which the light travels due to the Doppler effect.",
+        "passed": false,
+        "grader_note": null,
+        "wall_time_ms": 1522,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "greeting",
+        "task_id": "ebccc335-e29b-4c6e-a7e2-62c5c2aee648",
+        "status": "succeeded",
+        "output": "Hello! How may I assist you today?",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 514,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "refusal-unknown",
+        "task_id": "fc02765b-3064-4523-850c-49f4cccd8035",
+        "status": "succeeded",
+        "output": "I apologize, but I cannot accurately answer your question because \"unladen Klorthian skybeast\" does not appear to be a real planet or known creature in standard science fiction literature. Therefore, it's not possible for me to provide the airspeed velocity of an unladen Klorthian skybeast.\n\nSome fictional creatures from different universes often appear similar on screen, especially in films and games, but \"Unladen\" as an actual place is not a recognizable real-world location.\n\nHowever, if you're looking for information about velocities or speed concepts, please give me more context or clarify what specific type of answer you're asking for.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 7592,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      }
+    ],
+    "per_target": {
+      "gemma:2b": {
+        "kind": "model",
+        "urn": "oasf://commons/inference/gemma-2b/v1",
+        "case_count": 5,
+        "passed_count": 3,
+        "avg_wall_time_ms": 3138.4
+      },
+      "qwen2.5:0.5b": {
+        "kind": "model",
+        "urn": "oasf://commons/inference/qwen2.5-0.5b/v1",
+        "case_count": 5,
+        "passed_count": 4,
+        "avg_wall_time_ms": 2128.2
+      }
+    }
+  }
+]

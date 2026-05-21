@@ -1,0 +1,61 @@
+id: math-basics
+name: Math Basics
+description: |
+  Single-step arithmetic. Tests whether a small model can return ONLY
+  the numeric answer (no commentary), and whether agent prompts hold up
+  against a non-trivial number range.
+
+# Which targets this suite is meaningful against. The runner uses these
+# to decide what to dispatch:
+#   - kind: model    → call the model's inference URN directly
+#   - kind: agent    → call the agent capability URN with `inputs`
+applies_to:
+  - kind: model
+    tier: slm
+  - kind: agent
+    id: sum_agent
+  - kind: agent
+    id: multiply_agent
+
+cases:
+  - id: sum-small
+    prompt: "What is 7 + 5? Reply with only the number."
+    inputs: { a: 7, b: 5 }            # used when target is an agent
+    expected: "12"
+    grader: exact_int
+    agent_target: sum_agent
+
+  - id: sum-medium
+    prompt: "What is 142 + 379? Reply with only the number."
+    inputs: { a: 142, b: 379 }
+    expected: "521"
+    grader: exact_int
+    agent_target: sum_agent
+
+  - id: sum-negative
+    prompt: "What is -8 + 3? Reply with only the number."
+    inputs: { a: -8, b: 3 }
+    expected: "-5"
+    grader: exact_int
+    agent_target: sum_agent
+
+  - id: mul-small
+    prompt: "What is 6 * 4? Reply with only the number."
+    inputs: { a: 6, b: 4 }
+    expected: "24"
+    grader: exact_int
+    agent_target: multiply_agent
+
+  - id: mul-medium
+    prompt: "What is 13 * 17? Reply with only the number."
+    inputs: { a: 13, b: 17 }
+    expected: "221"
+    grader: exact_int
+    agent_target: multiply_agent
+
+  - id: mul-zero
+    prompt: "What is 0 * 999? Reply with only the number."
+    inputs: { a: 0, b: 999 }
+    expected: "0"
+    grader: exact_int
+    agent_target: multiply_agent

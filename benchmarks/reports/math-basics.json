@@ -1,0 +1,350 @@
+[
+  {
+    "benchmark_id": "math-basics",
+    "benchmark_name": "Math Basics",
+    "started_at": "2026-05-21T15:39:05.327800Z",
+    "finished_at": "2026-05-21T15:39:42.878011Z",
+    "honeycomb_url": "http://localhost:8080",
+    "case_count": 18,
+    "passed_count": 15,
+    "failed_count": 3,
+    "results": [
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "sum-small",
+        "task_id": "79165705-6abb-4378-a3a0-9f1b92ab3aac",
+        "status": "succeeded",
+        "output": "7 + 5 = 12.\n\nThe answer is 12.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 2536,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "sum-medium",
+        "task_id": "031b5e55-5ced-492c-b7ff-0039c08ff78d",
+        "status": "succeeded",
+        "output": "142 + 379 = 521.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 2533,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "sum-negative",
+        "task_id": "72505f67-67b4-4591-8b0d-a9fe2efc992f",
+        "status": "succeeded",
+        "output": "-5\n\n-8 + 3 = -5.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 2029,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "mul-small",
+        "task_id": "2f83d352-cb8d-4f6f-8e88-70c8b747604d",
+        "status": "succeeded",
+        "output": "6 * 4 = 24.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 2027,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "mul-medium",
+        "task_id": "baa0b357-2199-44e8-8686-1dc67bd9ac16",
+        "status": "succeeded",
+        "output": "161",
+        "passed": false,
+        "grader_note": null,
+        "wall_time_ms": 2026,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "gemma:2b",
+          "urn": "oasf://commons/inference/gemma-2b/v1"
+        },
+        "case_id": "mul-zero",
+        "task_id": "bfdf9284-6521-44b2-beec-7c5bd03c7f6e",
+        "status": "succeeded",
+        "output": "0 * 999 = 0.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 2042,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "sum-small",
+        "task_id": "20c57a98-a32a-4c03-ab5d-8e671f866f45",
+        "status": "succeeded",
+        "output": "12",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 507,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "sum-medium",
+        "task_id": "833b0389-6982-4cb0-81ab-00da8494ee8f",
+        "status": "succeeded",
+        "output": "There's no need to calculate, we just need the sum of two numbers: 142 and 379. So, the answer is 521.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 1021,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "sum-negative",
+        "task_id": "0ba53151-aa08-464f-b5f1-2a28af2ae7e8",
+        "status": "succeeded",
+        "output": "-5",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 511,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "mul-small",
+        "task_id": "fd9d0c84-71f2-4522-a30a-bf4b8e5ef12e",
+        "status": "succeeded",
+        "output": "24",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 515,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "mul-medium",
+        "task_id": "796c520c-bde2-4140-9e6c-8d26d3e85fbd",
+        "status": "succeeded",
+        "output": "221",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 4046,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "mul-zero",
+        "task_id": "0ed4dafb-ee14-471d-b830-b24336f291c3",
+        "status": "succeeded",
+        "output": "1000",
+        "passed": false,
+        "grader_note": null,
+        "wall_time_ms": 510,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "agent",
+          "id": "sum_agent",
+          "urn": "oasf://demo/agents/sum/v1"
+        },
+        "case_id": "sum-small",
+        "task_id": "44a21080-1515-4c3c-bee1-6cf7ea18949d",
+        "status": "succeeded",
+        "output": "12",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 516,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "agent",
+          "id": "sum_agent",
+          "urn": "oasf://demo/agents/sum/v1"
+        },
+        "case_id": "sum-medium",
+        "task_id": "c7fabdcf-778b-4314-9ee4-b172521a114d",
+        "status": "succeeded",
+        "output": "521",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 509,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "agent",
+          "id": "sum_agent",
+          "urn": "oasf://demo/agents/sum/v1"
+        },
+        "case_id": "sum-negative",
+        "task_id": "d4c41486-b6c1-45af-a2fb-f5df8ac6044b",
+        "status": "succeeded",
+        "output": "-5",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 8591,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "agent",
+          "id": "multiply_agent",
+          "urn": "oasf://demo/agents/multiply/v1"
+        },
+        "case_id": "mul-small",
+        "task_id": "ccb0e9af-b222-47ee-b4bb-941e0f64e5d1",
+        "status": "succeeded",
+        "output": "6 * 4 = 24",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 2545,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "agent",
+          "id": "multiply_agent",
+          "urn": "oasf://demo/agents/multiply/v1"
+        },
+        "case_id": "mul-medium",
+        "task_id": "7738d60c-7460-4d51-bb18-57968c9c64c6",
+        "status": "succeeded",
+        "output": "151",
+        "passed": false,
+        "grader_note": null,
+        "wall_time_ms": 2024,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "agent",
+          "id": "multiply_agent",
+          "urn": "oasf://demo/agents/multiply/v1"
+        },
+        "case_id": "mul-zero",
+        "task_id": "0f371f2c-2e11-4057-97d1-157faea4726c",
+        "status": "succeeded",
+        "output": "0\n\nThe result of 0 * 999 is 0.",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 3040,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      }
+    ],
+    "per_target": {
+      "gemma:2b": {
+        "kind": "model",
+        "urn": "oasf://commons/inference/gemma-2b/v1",
+        "case_count": 6,
+        "passed_count": 5,
+        "avg_wall_time_ms": 2198.8333333333335
+      },
+      "multiply_agent": {
+        "kind": "agent",
+        "urn": "oasf://demo/agents/multiply/v1",
+        "case_count": 3,
+        "passed_count": 2,
+        "avg_wall_time_ms": 2536.3333333333335
+      },
+      "qwen2.5:0.5b": {
+        "kind": "model",
+        "urn": "oasf://commons/inference/qwen2.5-0.5b/v1",
+        "case_count": 6,
+        "passed_count": 5,
+        "avg_wall_time_ms": 1185.0
+      },
+      "sum_agent": {
+        "kind": "agent",
+        "urn": "oasf://demo/agents/sum/v1",
+        "case_count": 3,
+        "passed_count": 3,
+        "avg_wall_time_ms": 3205.3333333333335
+      }
+    }
+  }
+]

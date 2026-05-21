@@ -1,0 +1,16 @@
+id: gemma:2b
+name: Gemma 2B
+capability_urn: oasf://commons/inference/gemma-2b/v1
+runtime: ollama
+pull_tag: gemma:2b
+size_mb: 1500
+min_memory_mb: 4096
+min_cpu_cores: 2
+supports_tool_calling: false
+license: gemma-license
+tier: slm
+description: |
+  Google's Gemma 2B. Larger context window than Qwen 0.5B; better at
+  multi-step reasoning. Tends to be chatty — wrap prompt templates with
+  strict "reply with only the result" instructions, then rely on the
+  last-integer extractor on the queen side.

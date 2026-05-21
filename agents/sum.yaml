@@ -1,0 +1,20 @@
+id: sum_agent
+name: Sum Agent
+capability_urn: oasf://demo/agents/sum/v1
+description: Add two integers a + b. Use whenever the request requires addition.
+runs_on: slm
+prompt_template: |
+  You are a calculator. Compute {{a}} + {{b}}.
+  Reply with ONLY the integer result, no words, no punctuation.
+input_schema:
+  type: object
+  properties:
+    a: { type: integer }
+    b: { type: integer }
+  required: [a, b]
+max_tokens: 16
+temperature: 0.0
+compatible_models:
+  - qwen2.5:0.5b
+  - gemma:2b
+  - llama3.2:3b
