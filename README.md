@@ -26,6 +26,24 @@ benchmarks/     one YAML per benchmark suite
 
 The three directories are **orthogonal**. Models advertise inference URNs. Agents advertise themselves on top of models. Benchmarks score what models and agents produce. Adding any of them is a one-file PR.
 
+## Model tiers
+
+The catalog is purposefully wide so the scheduler has options across hardware classes. Combs only pull the models they advertise — listing a model here does not mean every comb downloads it.
+
+| Tier | size_mb | min_memory_mb | Examples | Use |
+|---|---|---|---|---|
+| **tiny** | <1 GB | 1–2 GB | `smollm2:135m`, `smollm2:360m`, `qwen2.5:0.5b`, `qwen2.5:1.5b` | Phones, Pi-class boxes; classification, light extraction |
+| **small SLM** | 1–2 GB | 3–5 GB | `llama3.2:1b`, `gemma2:2b`, `smollm2:1.7b`, `qwen2.5:3b`, `lfm2.5-thinking:1.2b`, `phi4-mini`, `llama3.2:3b` | Laptops, edge servers; agent workers |
+| **medium LLM** | 4–6 GB | 10–13 GB | `qwen2.5:7b`, `llama3.1:8b`, `gemma2:9b` | 16 GB workstations; queen orchestrators |
+| **large LLM** | 8–10 GB | 18–20 GB | `qwen2.5:14b` | 24 GB workstations or 16 GB GPUs |
+| **full LLM** | 40 GB+ | 48 GB+ | `llama3.3:70b` | Workstation rigs / multi-GPU servers |
+
+Honeycomb's `/api/nodes/register` enforces `min_memory_mb` and `min_cpu_cores` against the comb's reported resources, so a 4 GB Pi cannot accidentally claim it serves `qwen2.5:14b`.
+
+Tool-calling: `qwen2.5:*`, `llama3.x`, `smollm2:*`, `phi4-mini`, and `lfm2.5-thinking:1.2b` all support tools — they can drive queens or be called as sub-agents. `gemma2:*` and `gemma:2b` do not — direct inference only.
+
+**Adding a model to a running comb** is two YAML changes: the catalog entry (here) and the comb's TOML (a `[[capabilities]]` block pointing at the model's URN). Bring the comb back up; it advertises the URN; Honeycomb starts routing.
+
 > **A note on benchmarks vs capabilities.** Benchmarks are *not* listed as runtime capabilities a comb advertises. They are catalog entries the `hive-bench` runner consumes — it reads the suite, looks up the targets in `applies_to`, and dispatches the prompts through the live Honeycomb network. Combs only advertise things they *do* (inference, agents, queen). Benchmarks measure those things.
 
 ## Schema (model)

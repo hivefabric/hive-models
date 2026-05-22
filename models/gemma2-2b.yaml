@@ -1,0 +1,17 @@
+id: gemma2:2b
+name: Gemma 2 2B Instruct
+capability_urn: oasf://commons/inference/gemma2-2b/v1
+runtime: ollama
+pull_tag: gemma2:2b
+size_mb: 1600
+min_memory_mb: 3072
+min_cpu_cores: 2
+supports_tool_calling: false
+license: gemma
+tier: slm
+description: |
+  Google's Gemma 2 2B (1.6 GB, 8K context). Successor to the
+  original gemma:2b shipped in the demo. No native tool-calling —
+  use it for direct inference / classification, NOT as a worker
+  behind tool-driven agents. Gemma licence (permissive but
+  use-case-restricted).

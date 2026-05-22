@@ -1,0 +1,17 @@
+id: llama3.3:70b
+name: Llama 3.3 70B Instruct
+capability_urn: oasf://commons/inference/llama3.3-70b/v1
+runtime: ollama
+pull_tag: llama3.3:70b
+size_mb: 43000
+min_memory_mb: 49152
+min_cpu_cores: 8
+supports_tool_calling: true
+license: llama-3.3-community
+tier: llm
+description: |
+  Meta's Llama 3.3 70B (~43 GB, 128K context, tools). The
+  full-LLM-machine tier marker — needs a workstation with 48 GB+ RAM
+  or a multi-GPU rig. Approaches Llama 3.1 405B quality at a fraction
+  of the cost. Good queen-orchestrator choice when latency budget
+  allows multi-second turns.

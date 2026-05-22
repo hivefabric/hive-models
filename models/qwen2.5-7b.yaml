@@ -1,0 +1,16 @@
+id: qwen2.5:7b
+name: Qwen 2.5 7B Instruct
+capability_urn: oasf://commons/inference/qwen2.5-7b/v1
+runtime: ollama
+pull_tag: qwen2.5:7b
+size_mb: 4700
+min_memory_mb: 10240
+min_cpu_cores: 4
+supports_tool_calling: true
+license: apache-2.0
+tier: llm
+description: |
+  Qwen2.5 7B (4.7 GB, 32K context, tools, Apache-2.0). First entry
+  in the LLM tier — comfortable on a 16 GB workstation, GPU
+  accelerates significantly. Strong code/math/reasoning compared to
+  the SLMs.

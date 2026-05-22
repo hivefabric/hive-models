@@ -1,0 +1,16 @@
+id: llama3.1:8b
+name: Llama 3.1 8B Instruct
+capability_urn: oasf://commons/inference/llama3.1-8b/v1
+runtime: ollama
+pull_tag: llama3.1:8b
+size_mb: 4900
+min_memory_mb: 10240
+min_cpu_cores: 4
+supports_tool_calling: true
+license: llama-3.1-community
+tier: llm
+description: |
+  Meta's Llama 3.1 8B (4.9 GB, 128K context, tools). Workhorse LLM
+  for general tasks — strong default for any comb with ≥16 GB RAM.
+  Close in capability to qwen2.5:7b; pick by ecosystem fit (Llama is
+  better-supported in some inference stacks).

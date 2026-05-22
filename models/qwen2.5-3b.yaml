@@ -1,0 +1,17 @@
+id: qwen2.5:3b
+name: Qwen 2.5 3B Instruct
+capability_urn: oasf://commons/inference/qwen2.5-3b/v1
+runtime: ollama
+pull_tag: qwen2.5:3b
+size_mb: 1900
+min_memory_mb: 5120
+min_cpu_cores: 2
+supports_tool_calling: true
+license: qwen
+tier: slm
+description: |
+  Qwen2.5 3B (1.9 GB, 32K context, tools). Steps into the SLM-mid
+  zone — meaningfully better at instruction following and structured
+  output than the 1.5B sibling, still cheap to run. Note: under the
+  Qwen license, NOT Apache-2.0 (3B and 72B are the only sizes in the
+  family with this restriction).

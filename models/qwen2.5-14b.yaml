@@ -1,0 +1,15 @@
+id: qwen2.5:14b
+name: Qwen 2.5 14B Instruct
+capability_urn: oasf://commons/inference/qwen2.5-14b/v1
+runtime: ollama
+pull_tag: qwen2.5:14b
+size_mb: 9000
+min_memory_mb: 18432
+min_cpu_cores: 4
+supports_tool_calling: true
+license: apache-2.0
+tier: llm
+description: |
+  Qwen2.5 14B (9.0 GB, 32K context, tools, Apache-2.0). Mid-LLM —
+  fits a high-end laptop with 24 GB RAM or a 16 GB GPU.
+  Apache-licensed at this tier, so usable in commercial deployments.

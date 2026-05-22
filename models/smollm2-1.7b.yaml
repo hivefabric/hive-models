@@ -1,0 +1,16 @@
+id: smollm2:1.7b
+name: SmolLM2 1.7B Instruct
+capability_urn: oasf://commons/inference/smollm2-1.7b/v1
+runtime: ollama
+pull_tag: smollm2:1.7b
+size_mb: 1800
+min_memory_mb: 4096
+min_cpu_cores: 2
+supports_tool_calling: true
+license: apache-2.0
+tier: slm
+description: |
+  HuggingFaceTB's SmolLM2 1.7B (1.8 GB, 8K context, tools). Largest
+  variant of the family — still small enough for laptops, decent at
+  multi-turn tool use. Apache-2.0 makes it the default
+  no-licensing-cost SLM tier in the catalog.

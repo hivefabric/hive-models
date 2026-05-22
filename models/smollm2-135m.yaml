@@ -1,0 +1,16 @@
+id: smollm2:135m
+name: SmolLM2 135M Instruct
+capability_urn: oasf://commons/inference/smollm2-135m/v1
+runtime: ollama
+pull_tag: smollm2:135m
+size_mb: 271
+min_memory_mb: 1024
+min_cpu_cores: 1
+supports_tool_calling: true
+license: apache-2.0
+tier: slm
+description: |
+  HuggingFaceTB's SmolLM2 — the smallest tool-calling open model worth
+  shipping (135M params, 271 MB, 8K context, Apache-2.0). Designed for
+  phones and microcontrollers. Floor of the catalog: anything that
+  can't run this is too small to participate.

@@ -1,0 +1,16 @@
+id: gemma2:9b
+name: Gemma 2 9B Instruct
+capability_urn: oasf://commons/inference/gemma2-9b/v1
+runtime: ollama
+pull_tag: gemma2:9b
+size_mb: 5400
+min_memory_mb: 12288
+min_cpu_cores: 4
+supports_tool_calling: false
+license: gemma
+tier: llm
+description: |
+  Google's Gemma 2 9B (5.4 GB, 8K context). Mid-LLM tier from the
+  Gemma family — strong general-purpose assistant. Like gemma2:2b,
+  no native tool-calling, so prefer qwen2.5:7b or llama3.1:8b for
+  queen-side orchestration in this size class.

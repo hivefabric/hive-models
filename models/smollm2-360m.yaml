@@ -1,0 +1,15 @@
+id: smollm2:360m
+name: SmolLM2 360M Instruct
+capability_urn: oasf://commons/inference/smollm2-360m/v1
+runtime: ollama
+pull_tag: smollm2:360m
+size_mb: 726
+min_memory_mb: 1536
+min_cpu_cores: 1
+supports_tool_calling: true
+license: apache-2.0
+tier: slm
+description: |
+  HuggingFaceTB's SmolLM2 360M (726 MB, 8K context, tools). Useful
+  step up from 135M without crossing the 1 GB threshold — runs
+  comfortably on a Raspberry Pi 4 or low-end Android.

@@ -1,0 +1,16 @@
+id: qwen2.5:1.5b
+name: Qwen 2.5 1.5B Instruct
+capability_urn: oasf://commons/inference/qwen2.5-1.5b/v1
+runtime: ollama
+pull_tag: qwen2.5:1.5b
+size_mb: 986
+min_memory_mb: 3072
+min_cpu_cores: 2
+supports_tool_calling: true
+license: apache-2.0
+tier: slm
+description: |
+  Qwen2.5 1.5B (986 MB, 32K context, tools, Apache-2.0). The sweet
+  spot for cheap inference on consumer hardware: ~2x the parameter
+  count of qwen2.5:0.5b but still well under 1 GB on disk. Strong
+  multilingual baseline.

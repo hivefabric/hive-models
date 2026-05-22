@@ -1,0 +1,18 @@
+id: phi4-mini
+name: Phi-4 Mini
+capability_urn: oasf://commons/inference/phi4-mini/v1
+runtime: ollama
+pull_tag: phi4-mini
+size_mb: 2500
+min_memory_mb: 5120
+min_cpu_cores: 2
+supports_tool_calling: true
+license: mit
+tier: slm
+description: |
+  Microsoft's Phi-4 Mini (3.8B params, ~2.5 GB, 128K context, tools,
+  MIT). Phi line is known for punching above its weight on
+  reasoning/maths benchmarks; the "-mini" variant adds proper
+  function-calling. MIT licence — most permissive in the catalog,
+  good default for anything that needs to ship without licence
+  review.
