@@ -1,0 +1,29 @@
+id: lfm2.5-thinking:1.2b
+name: LFM2.5 Thinking 1.2B
+capability_urn: oasf://commons/inference/lfm2.5-thinking-1.2b/v1
+runtime: ollama
+pull_tag: lfm2.5-thinking:1.2b
+size_mb: 731
+min_memory_mb: 3072
+min_cpu_cores: 2
+supports_tool_calling: true
+license: lfm-1.0
+tier: slm
+description: |
+  Liquid AI's LFM2.5 Thinking — a 1.2B-parameter hybrid (state-space +
+  attention) model designed for on-device deployment. 125K context.
+  Tool-calling capable: viable as both a worker and a queen
+  orchestrator. Mid-tier in the demo: heavier than qwen2.5:0.5b,
+  lighter than gemma:2b. Pulled into the demo stack to validate the
+  catalog's runtime-agnostic design — adding a second model family on
+  the same Ollama runtime is a one-YAML change.
+
+  **Caveat (2026-05-21):** as a *thinking* model, LFM2.5 returns its
+  chain-of-thought via Ollama's OpenAI-compat layer in a separate
+  `encrypted_content` field that the current `slm` agent handler does
+  not unwrap. Direct-inference benchmarks work cleanly (chat-completions
+  content extraction picks up the visible answer); agent-style
+  dispatch with "Reply with ONLY the integer" prompts produces empty
+  `output_text` because the answer lands in the thinking trace. Once
+  the slm handler grows a thinking-aware extractor, this model can
+  also serve sum_agent / multiply_agent.

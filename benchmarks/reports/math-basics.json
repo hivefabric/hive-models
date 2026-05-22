@@ -2,13 +2,115 @@
   {
     "benchmark_id": "math-basics",
     "benchmark_name": "Math Basics",
-    "started_at": "2026-05-21T15:39:05.327800Z",
-    "finished_at": "2026-05-21T15:39:42.878011Z",
+    "started_at": "2026-05-21T17:18:40.962915Z",
+    "finished_at": "2026-05-21T17:20:30.261682Z",
     "honeycomb_url": "http://localhost:8080",
-    "case_count": 18,
-    "passed_count": 15,
-    "failed_count": 3,
+    "case_count": 24,
+    "passed_count": 19,
+    "failed_count": 5,
     "results": [
+      {
+        "target": {
+          "kind": "model",
+          "id": "lfm2.5-thinking:1.2b",
+          "urn": "oasf://commons/inference/lfm2.5-thinking-1.2b/v1"
+        },
+        "case_id": "sum-small",
+        "task_id": "31f1d4e0-9bca-4a9f-aae5-2af8ac2ac027",
+        "status": "succeeded",
+        "output": "12",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 7091,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "lfm2.5-thinking:1.2b",
+          "urn": "oasf://commons/inference/lfm2.5-thinking-1.2b/v1"
+        },
+        "case_id": "sum-medium",
+        "task_id": "c3bcfe5e-2683-4167-b2de-6ea02a1c2814",
+        "status": "succeeded",
+        "output": "521\n\nWait, but the user said to reply with only the number. Since the question was \"What is 142 + 379? Reply with only the number.\" So just 521. Make sure not to add any extra text. Yeah, so just 521.\n\n**Final Answer**\n\\boxed{521}\n</think>\n\n521\n\nAlternatively, since the user specified to reply with only the number and not any other text, the final answer is simply:\n\n\\boxed{521}\n</think>\n\n521\n\n\\boxed{521}",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 12632,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "lfm2.5-thinking:1.2b",
+          "urn": "oasf://commons/inference/lfm2.5-thinking-1.2b/v1"
+        },
+        "case_id": "sum-negative",
+        "task_id": "0063f473-6ac1-408e-b4cf-407bf2408176",
+        "status": "succeeded",
+        "output": "The answer is \\boxed{-5}. \n\nWait, but the user said to reply with only the number. Since the user wants just the number, maybe just -5. Let me check the instructions again: \"Reply with only the number.\" So perhaps just \\boxed{-5}? Or just -5? Since boxes are typically used for boxed answers, but maybe they just want the number. Since the user said \"only the number,\" I'll put just -5. But maybe in the required format, since the user said \"only the number\", perhaps just put the box? Wait the user said \"put your final answer within \\boxed{}\", but the user also said \"reply with only the number\". Hmm conflicting. Wait the user instruction says \"Reply with only the number.\" So perhaps just the number, not in boxed. But since the system might expect a box, perhaps -5. Alternatively, the user might want just the number: -5. I think the safest is to follow the instruction strictly: \"only the number\", so -5. So \\boxed{-5} is appropriate here. Yeah, I'll go with that.\n</think>\n\n\\boxed{-5}",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 20194,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "lfm2.5-thinking:1.2b",
+          "urn": "oasf://commons/inference/lfm2.5-thinking-1.2b/v1"
+        },
+        "case_id": "mul-small",
+        "task_id": "087b4ff8-72e7-4d4c-8402-0bec0c078f82",
+        "status": "succeeded",
+        "output": "24\n\nWait, the user said to reply with only the number, so just 24. Let me confirm again... Yes, 6*4=24. So I'll just put 24.\n</think>\n\n24",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 6579,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "lfm2.5-thinking:1.2b",
+          "urn": "oasf://commons/inference/lfm2.5-thinking-1.2b/v1"
+        },
+        "case_id": "mul-medium",
+        "task_id": "d4b37f37-9da7-46e7-98ae-8dae6ccbb7ae",
+        "status": "succeeded",
+        "output": "221\n\n\\boxed{221}\n</think>\n\n221\n\n\\boxed{221}\n</think>\n\n221\n\n\\boxed{221}",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 9595,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "lfm2.5-thinking:1.2b",
+          "urn": "oasf://commons/inference/lfm2.5-thinking-1.2b/v1"
+        },
+        "case_id": "mul-zero",
+        "task_id": "077209ae-b877-48b1-9e91-25d9287c834e",
+        "status": "succeeded",
+        "output": "0\n\nWait, but the user said to reply with only the number. Since the question is \"What is 0 * 999?\", the answer is 0. So just put 0. I think that's correct. Let me check again: 0 multiplied by any number, including 999, is indeed 0. Yep. So \\boxed{0} would be the answer, but since the user said only the number, just 0. Alright, I'll go with 0.\n</think>\n\n0\n\n\\boxed{0}",
+        "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 12131,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
       {
         "target": {
           "kind": "model",
@@ -16,12 +118,12 @@
           "urn": "oasf://commons/inference/gemma-2b/v1"
         },
         "case_id": "sum-small",
-        "task_id": "79165705-6abb-4378-a3a0-9f1b92ab3aac",
+        "task_id": "ce269744-5442-4627-97ec-109c5af8d46e",
         "status": "succeeded",
-        "output": "7 + 5 = 12.\n\nThe answer is 12.",
+        "output": "7 + 5 = 12",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 2536,
+        "wall_time_ms": 5061,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -33,9 +135,9 @@
           "urn": "oasf://commons/inference/gemma-2b/v1"
         },
         "case_id": "sum-medium",
-        "task_id": "031b5e55-5ced-492c-b7ff-0039c08ff78d",
+        "task_id": "00cc1b36-617f-43cd-b79d-30c64f11e070",
         "status": "succeeded",
-        "output": "142 + 379 = 521.",
+        "output": "142 + 379 = 521",
         "passed": true,
         "grader_note": null,
         "wall_time_ms": 2533,
@@ -50,12 +152,12 @@
           "urn": "oasf://commons/inference/gemma-2b/v1"
         },
         "case_id": "sum-negative",
-        "task_id": "72505f67-67b4-4591-8b0d-a9fe2efc992f",
+        "task_id": "7ac4d93f-458e-4a61-8716-63380e033040",
         "status": "succeeded",
-        "output": "-5\n\n-8 + 3 = -5.",
+        "output": "-5\n\n-8 + 3 = -5",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 2029,
+        "wall_time_ms": 2038,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -67,12 +169,12 @@
           "urn": "oasf://commons/inference/gemma-2b/v1"
         },
         "case_id": "mul-small",
-        "task_id": "2f83d352-cb8d-4f6f-8e88-70c8b747604d",
+        "task_id": "acd88b32-6477-4129-aa05-c708927caf94",
         "status": "succeeded",
-        "output": "6 * 4 = 24.",
+        "output": "6 * 4 = 24.\n\nThe answer is 24.",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 2027,
+        "wall_time_ms": 2537,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -84,12 +186,12 @@
           "urn": "oasf://commons/inference/gemma-2b/v1"
         },
         "case_id": "mul-medium",
-        "task_id": "baa0b357-2199-44e8-8686-1dc67bd9ac16",
+        "task_id": "5455941e-0e29-4506-9f30-1154ca396add",
         "status": "succeeded",
-        "output": "161",
+        "output": "161. 13 * 17 = 161.",
         "passed": false,
         "grader_note": null,
-        "wall_time_ms": 2026,
+        "wall_time_ms": 3536,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -101,12 +203,12 @@
           "urn": "oasf://commons/inference/gemma-2b/v1"
         },
         "case_id": "mul-zero",
-        "task_id": "bfdf9284-6521-44b2-beec-7c5bd03c7f6e",
+        "task_id": "fbe337a4-fc2d-4cc2-925b-571276a4b129",
         "status": "succeeded",
-        "output": "0 * 999 = 0.",
+        "output": "0 * 999 = 0 \n\nA mathematical operation is performed by multiplying two or more numbers, then multiplying the results by the third or more numbers.",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 2042,
+        "wall_time_ms": 3544,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -118,10 +220,27 @@
           "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
         },
         "case_id": "sum-small",
-        "task_id": "20c57a98-a32a-4c03-ab5d-8e671f866f45",
+        "task_id": "600ae3f8-0420-47a0-b266-aef8a1fda902",
         "status": "succeeded",
         "output": "12",
         "passed": true,
+        "grader_note": null,
+        "wall_time_ms": 2026,
+        "observed_tool_calls": null,
+        "tool_calls_matched": null,
+        "last_error": null
+      },
+      {
+        "target": {
+          "kind": "model",
+          "id": "qwen2.5:0.5b",
+          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
+        },
+        "case_id": "sum-medium",
+        "task_id": "90463fa1-f6ad-4af7-a326-d14499f2a95d",
+        "status": "succeeded",
+        "output": "182",
+        "passed": false,
         "grader_note": null,
         "wall_time_ms": 507,
         "observed_tool_calls": null,
@@ -134,30 +253,13 @@
           "id": "qwen2.5:0.5b",
           "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
         },
-        "case_id": "sum-medium",
-        "task_id": "833b0389-6982-4cb0-81ab-00da8494ee8f",
-        "status": "succeeded",
-        "output": "There's no need to calculate, we just need the sum of two numbers: 142 and 379. So, the answer is 521.",
-        "passed": true,
-        "grader_note": null,
-        "wall_time_ms": 1021,
-        "observed_tool_calls": null,
-        "tool_calls_matched": null,
-        "last_error": null
-      },
-      {
-        "target": {
-          "kind": "model",
-          "id": "qwen2.5:0.5b",
-          "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
-        },
         "case_id": "sum-negative",
-        "task_id": "0ba53151-aa08-464f-b5f1-2a28af2ae7e8",
+        "task_id": "f173ed1b-1306-4bc2-8372-ad4007310631",
         "status": "succeeded",
         "output": "-5",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 511,
+        "wall_time_ms": 517,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -169,12 +271,12 @@
           "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
         },
         "case_id": "mul-small",
-        "task_id": "fd9d0c84-71f2-4522-a30a-bf4b8e5ef12e",
+        "task_id": "146a357b-1331-4c6f-9916-e636dd8bf7b0",
         "status": "succeeded",
         "output": "24",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 515,
+        "wall_time_ms": 510,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -186,12 +288,12 @@
           "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
         },
         "case_id": "mul-medium",
-        "task_id": "796c520c-bde2-4140-9e6c-8d26d3e85fbd",
+        "task_id": "51762a28-a716-43c8-9704-4abf5a35a383",
         "status": "succeeded",
-        "output": "221",
-        "passed": true,
+        "output": "289",
+        "passed": false,
         "grader_note": null,
-        "wall_time_ms": 4046,
+        "wall_time_ms": 1014,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -203,12 +305,12 @@
           "urn": "oasf://commons/inference/qwen2.5-0.5b/v1"
         },
         "case_id": "mul-zero",
-        "task_id": "0ed4dafb-ee14-471d-b830-b24336f291c3",
+        "task_id": "55aafdda-1c10-4dc3-b796-e22d943fafad",
         "status": "succeeded",
-        "output": "1000",
+        "output": "-1",
         "passed": false,
         "grader_note": null,
-        "wall_time_ms": 510,
+        "wall_time_ms": 507,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -220,12 +322,12 @@
           "urn": "oasf://demo/agents/sum/v1"
         },
         "case_id": "sum-small",
-        "task_id": "44a21080-1515-4c3c-bee1-6cf7ea18949d",
+        "task_id": "a1a64b4d-e177-4e0f-a2c6-72b734f7bf1d",
         "status": "succeeded",
         "output": "12",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 516,
+        "wall_time_ms": 514,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -237,12 +339,12 @@
           "urn": "oasf://demo/agents/sum/v1"
         },
         "case_id": "sum-medium",
-        "task_id": "c7fabdcf-778b-4314-9ee4-b172521a114d",
+        "task_id": "dfedf61d-c446-4bc3-aac0-2aafbc7ebc44",
         "status": "succeeded",
         "output": "521",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 509,
+        "wall_time_ms": 507,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -254,12 +356,12 @@
           "urn": "oasf://demo/agents/sum/v1"
         },
         "case_id": "sum-negative",
-        "task_id": "d4c41486-b6c1-45af-a2fb-f5df8ac6044b",
+        "task_id": "3d2b3b05-f87e-4dda-9b79-abf2173a2c81",
         "status": "succeeded",
         "output": "-5",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 8591,
+        "wall_time_ms": 8598,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -271,12 +373,12 @@
           "urn": "oasf://demo/agents/multiply/v1"
         },
         "case_id": "mul-small",
-        "task_id": "ccb0e9af-b222-47ee-b4bb-941e0f64e5d1",
+        "task_id": "bdd96928-3a9a-4c77-b75d-2b6ea269cd05",
         "status": "succeeded",
         "output": "6 * 4 = 24",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 2545,
+        "wall_time_ms": 2535,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -288,12 +390,12 @@
           "urn": "oasf://demo/agents/multiply/v1"
         },
         "case_id": "mul-medium",
-        "task_id": "7738d60c-7460-4d51-bb18-57968c9c64c6",
+        "task_id": "ee41bf84-e3b6-499b-b839-9136a5728ad3",
         "status": "succeeded",
         "output": "151",
         "passed": false,
         "grader_note": null,
-        "wall_time_ms": 2024,
+        "wall_time_ms": 2033,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -305,12 +407,12 @@
           "urn": "oasf://demo/agents/multiply/v1"
         },
         "case_id": "mul-zero",
-        "task_id": "0f371f2c-2e11-4057-97d1-157faea4726c",
+        "task_id": "704a3945-797a-4eeb-9494-24ce5769c608",
         "status": "succeeded",
         "output": "0\n\nThe result of 0 * 999 is 0.",
         "passed": true,
         "grader_note": null,
-        "wall_time_ms": 3040,
+        "wall_time_ms": 2534,
         "observed_tool_calls": null,
         "tool_calls_matched": null,
         "last_error": null
@@ -322,28 +424,35 @@
         "urn": "oasf://commons/inference/gemma-2b/v1",
         "case_count": 6,
         "passed_count": 5,
-        "avg_wall_time_ms": 2198.8333333333335
+        "avg_wall_time_ms": 3208.1666666666665
+      },
+      "lfm2.5-thinking:1.2b": {
+        "kind": "model",
+        "urn": "oasf://commons/inference/lfm2.5-thinking-1.2b/v1",
+        "case_count": 6,
+        "passed_count": 6,
+        "avg_wall_time_ms": 11370.333333333334
       },
       "multiply_agent": {
         "kind": "agent",
         "urn": "oasf://demo/agents/multiply/v1",
         "case_count": 3,
         "passed_count": 2,
-        "avg_wall_time_ms": 2536.3333333333335
+        "avg_wall_time_ms": 2367.3333333333335
       },
       "qwen2.5:0.5b": {
         "kind": "model",
         "urn": "oasf://commons/inference/qwen2.5-0.5b/v1",
         "case_count": 6,
-        "passed_count": 5,
-        "avg_wall_time_ms": 1185.0
+        "passed_count": 3,
+        "avg_wall_time_ms": 846.8333333333334
       },
       "sum_agent": {
         "kind": "agent",
         "urn": "oasf://demo/agents/sum/v1",
         "case_count": 3,
         "passed_count": 3,
-        "avg_wall_time_ms": 3205.3333333333335
+        "avg_wall_time_ms": 3206.3333333333335
       }
     }
   }

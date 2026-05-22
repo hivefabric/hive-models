@@ -18,3 +18,7 @@ compatible_models:
   - qwen2.5:0.5b
   - gemma:2b
   - llama3.2:3b
+  # lfm2.5-thinking:1.2b is intentionally omitted. As a "thinking"
+  # model its answer often lands in the chain-of-thought field that
+  # the current slm handler doesn't unwrap. Direct inference works;
+  # agent dispatch via this prompt template does not.
