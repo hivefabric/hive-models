@@ -1,0 +1,47 @@
+# OpenClaw bridge agent (Phase A — comb adapter)
+# Registers an OpenClaw agent as a HiveFabric comb capability.
+# The capability receives a task and dispatches it to the local OpenClaw instance
+# via its HTTP API (default: http://localhost:8765).
+#
+# Phase A: OpenClaw as comb (this file)
+# Phase B: OpenClaw fleet coordination (multiple instances, queen routes across them)
+# Phase C: HiveFabric makes OpenClaw enterprise-safe (Hive Keeper gates on shell/fs)
+#
+# Usage in comb config.toml:
+#   [[capabilities]]
+#   urn = "oasf://commons/openclaw/messaging/v1"
+#   handler = "openclaw"
+#   description = "Route messaging/calendar tasks to local OpenClaw agent"
+#   [capabilities.options]
+#   openclaw_url = "http://localhost:8765"
+#   allowed_actions = ["messaging", "calendar", "email"]  # never: shell, filesystem
+#
+# Security: shell and filesystem actions are NEVER exposed to pool jobs.
+# Only allow messaging, calendar, email for cross-tenant pool tasks.
+
+id: openclaw_bridge
+name: OpenClaw Bridge Agent
+capability_urn: oasf://commons/openclaw/bridge/v1
+description: |
+  Routes tasks to a local OpenClaw agent running on the same device.
+  OpenClaw handles real-world tool execution (messaging, calendar, email).
+  Shell and filesystem actions are gated by Hive Keeper — never exposed
+  to cross-tenant pool jobs.
+runs_on: llm
+prompt_template: |
+  {{prompt}}
+input_schema:
+  type: object
+  properties:
+    prompt:
+      type: string
+      description: The task to delegate to the OpenClaw agent.
+    allowed_actions:
+      type: array
+      items: { type: string }
+      description: Which action types OpenClaw is permitted to use for this task.
+      default: ["messaging", "calendar", "email"]
+  required: [prompt]
+max_tokens: 2048
+temperature: 0.3
+compatible_models: []  # OpenClaw uses its own configured LLM
