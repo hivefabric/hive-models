@@ -1,0 +1,44 @@
+id: doc_gen_agent
+name: Documentation Generation Agent
+capability_urn: oasf://commons/dev/doc-gen/v1
+description: |
+  Given a function or class, generate a docstring and usage example.
+  Lightweight enough to run on a 3B model — good fit for IDE-integrated
+  real-time documentation. Works on Python, TypeScript, Rust, Go, and Java.
+runs_on: llm
+prompt_template: |
+  Write a {{style}} docstring for the following {{language}} {{kind}}.
+  Include: a one-sentence summary, parameter descriptions, return value description, and a brief usage example.
+  Return ONLY the docstring (and nothing else). Do not repeat the function signature.
+
+  {{kind}} to document:
+  ```{{language}}
+  {{code}}
+  ```
+input_schema:
+  type: object
+  properties:
+    code:
+      type: string
+      description: The function or class to document.
+    language:
+      type: string
+      description: Programming language.
+      default: python
+    kind:
+      type: string
+      description: What is being documented (function, class, method, module).
+      default: function
+    style:
+      type: string
+      description: Docstring style (google, numpy, sphinx, jsdoc, rustdoc).
+      default: google
+  required: [code]
+max_tokens: 512
+temperature: 0.3
+compatible_models:
+  - llama3.2:3b
+  - qwen2.5:3b
+  - qwen2.5:7b
+  - llama3.1:8b
+  - phi4-mini

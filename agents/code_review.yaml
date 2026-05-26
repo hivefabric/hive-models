@@ -1,0 +1,42 @@
+id: code_review_agent
+name: Code Review Agent
+capability_urn: oasf://commons/dev/code-review/v1
+description: |
+  Review a code snippet and return structured findings: bugs, security issues,
+  style violations, and improvement suggestions. Designed for the AI dev shop
+  first-buyer profile — drop into a CI pipeline or IDE extension.
+runs_on: llm
+prompt_template: |
+  You are an expert code reviewer. Review the following {{language}} code and return a JSON object with this exact structure:
+  {
+    "summary": "one sentence overall assessment",
+    "bugs": ["list of bugs or logic errors found"],
+    "security": ["list of security concerns"],
+    "style": ["list of style/readability issues"],
+    "suggestions": ["list of improvement suggestions"]
+  }
+  Return ONLY the JSON object, no prose before or after.
+
+  Code to review:
+  ```{{language}}
+  {{code}}
+  ```
+input_schema:
+  type: object
+  properties:
+    code:
+      type: string
+      description: The code snippet to review.
+    language:
+      type: string
+      description: Programming language (python, typescript, rust, go, etc.)
+      default: python
+  required: [code]
+max_tokens: 1024
+temperature: 0.1
+compatible_models:
+  - qwen2.5:7b
+  - llama3.1:8b
+  - qwen2.5:14b
+  - llama3.3:70b
+  - phi4-mini

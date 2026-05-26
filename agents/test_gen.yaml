@@ -1,0 +1,43 @@
+id: test_gen_agent
+name: Test Generation Agent
+capability_urn: oasf://commons/dev/test-gen/v1
+description: |
+  Given a function signature and body, generate unit tests. Output is
+  executable test code in the target framework. Designed for AI dev shops
+  to automate test scaffolding.
+runs_on: llm
+prompt_template: |
+  You are an expert software engineer. Write {{framework}} unit tests for the following {{language}} function.
+
+  Requirements:
+  - Cover happy path, edge cases, and error conditions
+  - Tests must be self-contained and runnable
+  - Use standard {{framework}} patterns
+  - Return ONLY the test code, no explanation
+
+  Function to test:
+  ```{{language}}
+  {{code}}
+  ```
+input_schema:
+  type: object
+  properties:
+    code:
+      type: string
+      description: The function to test.
+    language:
+      type: string
+      description: Programming language.
+      default: python
+    framework:
+      type: string
+      description: Test framework (pytest, jest, go test, cargo test, etc.)
+      default: pytest
+  required: [code]
+max_tokens: 2048
+temperature: 0.2
+compatible_models:
+  - qwen2.5:7b
+  - llama3.1:8b
+  - qwen2.5:14b
+  - llama3.3:70b

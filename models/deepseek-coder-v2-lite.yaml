@@ -1,0 +1,19 @@
+id: deepseek-coder-v2:16b
+name: DeepSeek Coder V2 16B (Lite)
+capability_urn: oasf://commons/inference/deepseek-coder-v2-16b/v1
+runtime: ollama
+pull_tag: deepseek-coder-v2:16b
+size_mb: 9000
+min_memory_mb: 20480
+min_cpu_cores: 4
+supports_tool_calling: true
+license: deepseek
+tier: llm
+description: |
+  DeepSeek Coder V2 16B Lite — Mixture-of-Experts architecture, 16B
+  active params from a 236B total model. Approaches GPT-4 on code
+  benchmarks (HumanEval, SWE-bench) at a fraction of frontier cost.
+  128K context, tool-calling. Requires a 24 GB GPU or 32 GB RAM.
+  Most capable open-source code model at the 20GB memory tier.
+  Note: DeepSeek license (not OSI); commercial use permitted for
+  applications not competing with DeepSeek's own products.

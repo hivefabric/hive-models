@@ -1,0 +1,35 @@
+id: classify_agent
+name: Classify Agent
+capability_urn: oasf://commons/text/classify/v1
+description: |
+  Classify input text into one of N provided labels. Returns the label and
+  a confidence word (high/medium/low). Works for sentiment analysis,
+  topic classification, intent detection, and triage. Fast on 0.5B–1.5B
+  models — cheap per-call.
+runs_on: slm
+prompt_template: |
+  Classify the following text into EXACTLY ONE of these labels: {{labels_csv}}
+
+  Respond with ONLY a JSON object: {"label": "<chosen label>", "confidence": "high|medium|low"}
+  Do not include any other text.
+
+  Text to classify:
+  {{text}}
+input_schema:
+  type: object
+  properties:
+    text:
+      type: string
+      description: The text to classify.
+    labels_csv:
+      type: string
+      description: Comma-separated list of possible labels (e.g. "positive, negative, neutral").
+  required: [text, labels_csv]
+max_tokens: 32
+temperature: 0.0
+compatible_models:
+  - qwen2.5:0.5b
+  - qwen2.5:1.5b
+  - llama3.2:1b
+  - smollm2:1.7b
+  - llama3.2:3b

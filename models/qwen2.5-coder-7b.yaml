@@ -1,0 +1,17 @@
+id: qwen2.5-coder:7b
+name: Qwen 2.5 Coder 7B Instruct
+capability_urn: oasf://commons/inference/qwen2.5-coder-7b/v1
+runtime: ollama
+pull_tag: qwen2.5-coder:7b
+size_mb: 4700
+min_memory_mb: 10240
+min_cpu_cores: 4
+supports_tool_calling: true
+license: apache-2.0
+tier: llm
+description: |
+  Qwen 2.5 Coder 7B — purpose-trained on code generation, completion,
+  and debugging. 128K context, tool-calling, Apache-2.0. Outperforms
+  general Qwen 2.5 7B on HumanEval and MultiPL-E. Best code model that
+  comfortably fits in 16 GB RAM. Recommended default for code_review_agent,
+  test_gen_agent, and doc_gen_agent when the comb has a 7B GPU slot available.
